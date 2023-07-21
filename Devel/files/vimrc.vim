@@ -6,9 +6,7 @@ filetype indent on
 syntax on
 set shiftwidth=4
 set tabstop=4
-" set autoindent
 set expandtab
-" set cindent
 set bg=dark
 set showcmd
 set nu
@@ -20,7 +18,6 @@ set colorcolumn=81
 set clipboard=unnamedplus
 set diffopt=vertical
 set rtp+=~/.fzf
-set rtp+=~/.vim/bundle/Vundle.vim
 highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn','\%81v', 100)
 
@@ -103,16 +100,13 @@ Plug 'ibhagwan/fzf-lua'
 Plug 'itchyny/lightline.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'JamshedVesuna/vim-markdown-preview'
-Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'janko/vim-test'
 Plug 'jiangmiao/auto-pairs'
 Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'leafOfTree/vim-svelte-plugin'
-Plug 'leafOfTree/vim-svelte-plugin'
 Plug 'majutsushi/tagbar'
 Plug 'MattesGroeger/vim-bookmarks'
-Plug 'metakirby5/codi.vim'
 Plug 'metakirby5/codi.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'posva/vim-vue'
@@ -137,7 +131,6 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-pandoc/vim-rmarkdown'
 Plug 'vim-perl/vim-perl', { 'for': 'perl', 'do': 'make clean carp dancer highlight-all-pragmas moose test-more try-tiny' }
 Plug 'vim-syntastic/syntastic'
-Plug 'yegappan/taglist'
 call plug#end()
 
 "=============================================================================
