@@ -1,0 +1,9 @@
+Name: Devel::PerlToolSet
+Description: Toolkit for perl developer
+Author: Marco Silva <arthurpbs@gmail.com> }}
+License: Perl5
+
+# Only if you have dependencies to other Rex Modules.
+# Require:
+#    - Other::Rex::Module
+#    - 2nd::Rex::Module

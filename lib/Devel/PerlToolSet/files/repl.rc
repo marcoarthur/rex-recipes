@@ -1,0 +1,42 @@
+# ~/.re.pl/repl.rc
+
+use feature ':5.24';
+use lib './lib';
+use Term::ANSIColor;
+use utf8;
+
+$_REPL->load_plugin($_) for qw(
+    History         Colors
+    FancyPrompt     Refresh
+    Interrupt       OutputCache
+    DDC             Nopaste
+    PPI
+
+    ReadLineHistory
+    MultiLine::PPI
+
+    Completion
+    CompletionDriver::Keywords
+    CompletionDriver::LexEnv
+    CompletionDriver::Methods
+    CompletionDriver::INC
+    CompletionDriver::Globals
+    CompletionDriver::Turtles
+);
+
+$_REPL->fancy_prompt(sub {
+    my $self = shift;
+    "\ca" . color('blue')  . "\cb" . $self->current_package
+  . "\ca" . color('green') . "\cb" . '(0)'
+  . "\ca" . color('reset') . "\cb" . '> '
+});
+
+$_REPL->fancy_continuation_prompt(sub {
+    my $self = shift;
+    "\ca" . color('blue')   . "\cb" . $self->current_package
+  . "\ca" . color('yellow') . "\cb" . '(' . $self->line_depth . ')'
+  . "\ca" . color('reset')  . "\cb" . '> ' . (' ' x ($self->line_depth * 2))
+});
+
+#package main;
+$Devel::REPL::Plugin::Packages::PKG_SAVE = 'main';
