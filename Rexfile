@@ -3,7 +3,8 @@ require Devel::Nvim;
 require Service::Pg;
 require Devel::PerlToolSet;
 
-user 'root';
-group development => 'perl.dev', 'js.dev';
-
 1;
+
+__END__
+
+Rexfile

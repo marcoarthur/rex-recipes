@@ -38,7 +38,7 @@ task perlbrew => sub {
 
    run 'install perlbrew',
    command => 'curl -L https://install.perlbrew.pl | bash',
-   unless  => 'perlbrew --version',
+   unless  => "$brew --version",
    auto_die => TRUE;
 
    run 'run perlbrew init',

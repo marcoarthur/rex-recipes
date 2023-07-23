@@ -34,9 +34,9 @@ sub setup_nvim {
 
     # save config files
     file "~/.config/nvim/init.vim",
-    source => './Devel/files/init.vim';
+    source => './lib/Devel/Nvim/files/init.vim';
     file "~/.vimrc",
-    source => './Devel/files/vimrc.vim';
+    source => './lib/Devel/Nvim/files/vimrc.vim';
 
     # install nvm
     my $nvm_v = "v0.39.3";
