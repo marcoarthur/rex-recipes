@@ -1,7 +1,7 @@
 Name: Service::Pg
-Description: {{ DESCRIPTION }}
-Author: {{ your name <your.name@email.com> }}
-License: {{ THE LICENSE }}
+Description: Instantiate a subutai debian container with PostgreSQL server
+Author: Marco Arthur <arthurpbs@gmail.com>
+License: Perl License
 
 # Only if you have dependencies to other Rex Modules.
 Require:

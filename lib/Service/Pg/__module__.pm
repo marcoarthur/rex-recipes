@@ -1,3 +1,4 @@
+## no critic
 package Service::Pg;
 
 use Rex -base;
