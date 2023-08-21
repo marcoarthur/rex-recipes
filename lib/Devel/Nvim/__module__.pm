@@ -1,11 +1,14 @@
-##no critic
 package Devel::Nvim;
-##use critic
 
 use strictures 2;
 use Rex -base;
 
 user 'root';
+
+sub run_it {
+    my ($title, %args) = (shift, @_);
+    say "running $title" and run $title, %args;
+}
 
 sub setup_nvim {
     my $url = 'https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz';

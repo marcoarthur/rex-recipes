@@ -1,6 +1,4 @@
-## no critic
 package Devel::PerlToolSet;
-## critic
 use strictures 2;
 
 use Rex -base;
@@ -74,7 +72,7 @@ task devtool => sub {
    Carton Devel::MAT Devel::REPL  App::Yath
    Devel::Trace Devel::Cover Devel::NYTProf
    Perl::LanguageServer Perl::Tidy
-   Perl::Critic
+   Perl::Critic Dist::Milla Minilla
    );
    my @prereqs = qw(perl-doc libanyevent-perl libio-aio-perl);
    pkg $_, ensure => "present" for @prereqs;
@@ -89,7 +87,7 @@ desc "install frameworks";
 task kits => sub {
    my @kits = qw(
    Mojolicious DBI DBIx::Class Object::Pad
-   Moo Moose Type::Tiny
+   Moo Moose Type::Tiny App::Sqitch
    IO::Async AnyEvent FFI::Platypus
    );
 
